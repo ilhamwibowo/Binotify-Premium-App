@@ -3,21 +3,3 @@ body {
     background-color: #121212 !important;
     font-family: 'Nunito Sans', 'Montserrat', sans-serif;
 }
-
-
-.container {
-    display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 60px 100%;
-    grid-template-areas:
-        "sidebar navbar"
-        "sidebar main";
-}
-
-Sidebar {
-    grid-area: sidebar; 
-}
-
-Navbar {
-    grid-area: navbar;
-}
