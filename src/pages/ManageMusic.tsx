@@ -8,7 +8,7 @@ const ManageMusic = () => {
     <div className="container">
       <Navbar />
       <Sidebar />
-      <div className='main'>
+      <div className='main-manage-music'>
         <h1>ManageMusic</h1>
       </div>
     </div>
