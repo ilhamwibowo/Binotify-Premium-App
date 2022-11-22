@@ -16,6 +16,6 @@ Navbar {
     grid-area: navbar;
 }
 
-.main {
+.main-subscription {
     grid-area: main;
 }
