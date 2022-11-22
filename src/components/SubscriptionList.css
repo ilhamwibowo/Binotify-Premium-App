@@ -1,0 +1,15 @@
+.subscription-list {
+    margin: 10px 25px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-auto-columns: minmax(300px, auto);
+    grid-template-areas: "a a a";
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+    overflow: hidden;
+}
+
+.main SubscriptionRequest {
+    grid-area: 'a';
+}

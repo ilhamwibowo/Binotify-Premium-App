@@ -1,0 +1,57 @@
+.subscription-request {
+    background-color: rgba(255,255,255,0.1);
+    transition:0.3s;
+    border-radius: 5px; 
+}
+
+.subscription-request:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.subscription-request > .grid {
+    margin: 10px 15px;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+    grid-template-areas: 
+    "user singer"
+    "btn-accept btn-decline";
+}
+
+.subscription-request > .user {
+    grid-area: "user";
+}
+.subscription-request > .singer {
+    grid-area: "singer";
+}
+.subscription-request > .accept {
+    grid-area: "btn-accept";
+}
+.subscription-request > .decline {
+    grid-area: "btn-decline";
+}
+
+.subscription-request > .grid > .btn {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #1ED760 ;
+    margin: 0;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 50%;
+}
+
+.subscription-request > .grid > .btn:hover {
+    width:110px;
+    height:50px;
+    background-color: #50DE82;
+}
+
+.subscription-request:hover .btn {
+    opacity:100%;
+}
