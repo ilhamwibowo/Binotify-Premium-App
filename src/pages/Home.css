@@ -1,4 +1,22 @@
-.main-home {
+
+.container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 60px 100%;
+    grid-template-areas:
+        "sidebar navbar"
+        "sidebar main";
+}
+
+Sidebar {
+    grid-area: sidebar; 
+}
+
+Navbar {
+    grid-area: navbar;
+}
+
+.main {
     grid-area: main;
     display: flex;
     flex-direction: column;
