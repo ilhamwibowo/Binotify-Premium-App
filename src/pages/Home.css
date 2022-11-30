@@ -1,28 +1,30 @@
-
+body {
+  background-color: #121212;
+}
 .container {
-    display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 60px 100%;
-    grid-template-areas:
-        "sidebar navbar"
-        "sidebar main";
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 60px 100%;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar main";
 }
 
 Sidebar {
-    grid-area: sidebar; 
+  grid-area: sidebar;
 }
 
 Navbar {
-    grid-area: navbar;
+  grid-area: navbar;
 }
 
 .main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    margin: 10px 25px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin: 10px 25px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }

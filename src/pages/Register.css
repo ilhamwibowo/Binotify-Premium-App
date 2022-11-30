@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", "Montserrat", sans-serif;
+}
+
+h1 {
+  padding: 30px;
+  font-weight: 900;
+}
+
+hr {
+  background-color: #d9dadc;
+  border: 0.5px solid #d9dadc;
+}
+
+.container-login {
+  width: 400px;
+  padding: 50px;
+  margin: auto;
+}
+
+.input-field {
+  width: 380px;
+  padding: 15px 10px 15px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #7d7d7d;
+}
+
+.input-true:focus {
+  border: 2px solid #1ed760;
+  outline: 2px solid #1ed760;
+}
+
+.input-false:focus {
+  border: 2px solid red;
+  outline: 2px solid red;
+}
+
+.input-field:hover {
+  border-color: black;
+}
+.input-name {
+  text-align: left;
+  padding: 5px 0 5px 2px;
+}
+
+.btn-login {
+  border: none;
+  padding: 15px;
+  width: 100px;
+  border-radius: 35px;
+  background-color: #1ed760;
+  margin: 20px 0 25px 0;
+  font-weight: 800;
+  transition-duration: 0.4s;
+}
+
+.btn-login:hover {
+  width: 110px;
+  height: 50px;
+  background-color: #50de82;
+}
+.btn-sign {
+  width: 400px;
+  background-color: white;
+  border: 1px solid #7d7d7d;
+  padding: 15px;
+  border-radius: 35px;
+  color: #7d7d7d;
+  font-weight: 800;
+}
+
+.btn-sign:hover {
+  border-color: black;
+}
+.sign-up-text {
+  padding: 20px;
+  font-weight: 900;
+}
+
+span {
+  text-align: left;
+}
+
+.error-msg {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-login {
+    width: 100%;
+    transition-duration: 0.4s;
+  }
+  .btn-login:hover {
+    background-color: #50de82;
+  }
+}
