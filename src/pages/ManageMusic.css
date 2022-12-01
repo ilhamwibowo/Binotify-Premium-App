@@ -5,6 +5,7 @@
     grid-template-rows: 60px 100%;
     grid-template-areas:
         "sidebar navbar"
+        "add-song"
         "sidebar main";
 }
 
@@ -16,13 +17,10 @@ Navbar {
     grid-area: navbar;
 }
 
-.main {
+.main-manage-music {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    margin: 10px 25px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+}
+
+.btn-add-song{
+    grid-area: add-song;
 }

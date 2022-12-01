@@ -4,9 +4,9 @@ import "./Navbar.css"
 const navbar = () => {
   return (
     <div className="nav">
-      Navbar
+      table
     </div>
   )
 }
 
-export default navbar
+export default navbar;

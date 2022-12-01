@@ -1,0 +1,32 @@
+.song-list {
+    margin: 10px 25px;
+    color: white;
+    font-family: 'Montserrat', Verdana;
+    display: grid;
+    grid-auto-columns: minmax(800px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "a"
+    "btn-add-song";
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+    overflow: hidden;
+}
+.btn-add-song {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #1ED760 ;
+    margin: 13px;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 50%;
+}
+
+.main SongEdit {
+    grid-area: 'a';
+}
+
+

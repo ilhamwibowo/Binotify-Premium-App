@@ -1,0 +1,79 @@
+.song-edit {
+    background-color: rgba(255,255,255,0.1);
+    transition:0.3s;
+    border-radius: 5px; 
+}
+
+.song-edit:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.song-edit > .grid {
+    margin: 10px 15px;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.5fr 0.5fr;
+    justify-items: left;
+    grid-template-areas: 
+    "song-id judul penyanyi audio-path btn-edit btn-delete";
+}
+
+.song-edit > .song-id {
+    grid-area: "song-id";
+}
+.song-edit > .judul {
+    grid-area: "judul";
+}
+.song-edit > .penyanyi {
+    grid-area: "penyanyi";
+}
+.song-edit > .audio-path {
+    grid-area: "audio-path";
+}
+
+.song-edit > .grid > .btn-edit {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #1ED760 ;
+    margin: 13px;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 50%;
+}
+
+.song-edit > .grid > .btn-delete {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #1ED760 ;
+    margin: 13px;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 50%;
+}
+
+.song-edit > .grid > .btn-edit:hover {
+    width:100px;
+    height:50px;
+    background-color: #93fcb8;
+}
+
+.song-edit:hover .btn-edit {
+    opacity:100%;
+}
+
+
+.song-edit > .grid > .btn-delete:hover {
+    width:100px;
+    height:50px;
+    background-color: #93fcb8;
+}
+
+.song-edit:hover .btn-delete {
+    opacity:100%;
+}
