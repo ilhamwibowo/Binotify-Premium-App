@@ -19,14 +19,13 @@ const SongEdit: React.FC<Props> = ({song, songList, setSongList }) => {
         <div className='song-edit'>
             <form className='grid'>
                 <p className='song-id'>{song.song_id}</p>
-                <p className='judul'>{song.judul}</p>
-                <p className='penyanyi'>{song.penyanyi}</p>
-                <p className='audio-path'>{song.audio_path}</p>
+                <input type="text" className='input-lagu' id="judul" value={song.judul} />
+                <input type="text" className='input-lagu' id="penyanyi" value={song.penyanyi} />
+                <input type="text" className='input-lagu' id="audio-path" value={song.audio_path} />
                 <button className='btn-edit'>Edit</button>
                 <button className='btn-delete'>Delete</button>
             </form>
         </div>
-
     )
 }
 
