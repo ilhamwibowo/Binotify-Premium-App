@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import "./Subscription.css"
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import SidebarAdmin from '../components/SidebarAdmin';
 import SubscriptionList from '../components/SubscriptionList';
 
 interface Subscription {
@@ -11,6 +11,7 @@ interface Subscription {
 }
 
 const Subscription = () => {  
+  document.body.style.backgroundColor = "#121212";
 
   const [subs, setSubs] = useState<any[]>([]);
   useEffect(() => {
@@ -47,7 +48,7 @@ const Subscription = () => {
   return (
     <div className="container">
       <Navbar />
-      <Sidebar />
+      <SidebarAdmin />
       <div className='main-subscription'>
           {/* <p>{subs[0].status}</p> */}
           {/* {

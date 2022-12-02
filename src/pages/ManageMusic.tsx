@@ -14,6 +14,7 @@ interface ManageMusic{
 }
 
 const ManageMusic = () => {
+  document.body.style.backgroundColor = "#121212";
   const [songList, setSongList] = useState<ManageMusic[]>([{song_id: 1, judul: "Dynamite", penyanyi: "Blackpink", audio_path: "https://www.youtube.com/watch?v=gdZLi9oWNZg"}, {song_id: 2, judul: "Ice Cream", penyanyi: "Blackpink", audio_path: "https://www.youtube.com/watch?v=gdZLi9oWNZg"}])
   return (
     <div className="container">

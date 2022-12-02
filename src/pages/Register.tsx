@@ -36,7 +36,8 @@ const Register = () => {
     try {
       const { data } = await axios.post("http://localhost:8000/register", userData);
       if (data) {
-        navigate("/login");
+        setCookie("jwt", data.accessToken);
+        navigate("/");
       }
     } catch (ex) {
       alert(ex);
