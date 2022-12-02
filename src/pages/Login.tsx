@@ -6,7 +6,7 @@ import './Login.css';
 
 const Login = () => {
   document.body.style.backgroundColor = "white";
-  const [cookies, setCookie, removeCookie] = useCookies(['jwt']);
+  const [cookies, setCookie, removeCookie] = useCookies(['jwt', 'user_id']);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -15,21 +15,27 @@ const Login = () => {
     }
   }, [cookies, navigate]);
 
-  const [values, setValues] = useState({ email: "", password: "" });
+  const [values, setValues] = useState({ username: "", password: "" });
   
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     
     event.preventDefault();
     const userData = {
-      email: values.email,
+      username: values.username,
       password: values.password
     };
     try {
 
       const { data } = await axios.post("http://localhost:8000/login", userData);
       if (data) {
+        setCookie('user_id', data.user_id);
         setCookie("jwt", data.accessToken);
-        navigate("/");
+        if (data.isAdmin) {
+          navigate("/subscription");
+        }
+        else {
+          navigate("/manage-music");
+        }
       }
     } catch (ex) {
       alert(ex);
@@ -45,7 +51,7 @@ const Login = () => {
             <p className="input-name">Username</p>
             <input 
               type="text" 
-              name="email" 
+              name="username" 
               className="input-field" 
               placeholder="Username" 
               onChange={(e) =>

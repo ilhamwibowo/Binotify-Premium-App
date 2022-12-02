@@ -7,7 +7,7 @@ import './Register.css'
 const Register = () => {
   document.body.style.backgroundColor = "white";
 
-  const [cookies, setCookie, removeCookie] = useCookies(['jwt']);
+  const [cookies, setCookie, removeCookie] = useCookies(['jwt', 'user_id']);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -36,7 +36,9 @@ const Register = () => {
     try {
       const { data } = await axios.post("http://localhost:8000/register", userData);
       if (data) {
-        navigate("/login");
+        setCookie('user_id', data.user_id);
+        setCookie("jwt", data.accessToken);
+        navigate("/");
       }
     } catch (ex) {
       alert(ex);
