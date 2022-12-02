@@ -52,8 +52,8 @@ const SubscriptionRequest: React.FC<Props> = ({subscription, subscriptionList, s
   return (
     <div className='subscription-request'>
       <form className='grid' method="post" action="localhost:9999/subscription">
-        <p className='user'>{subscription.user}</p>
-        <p className='singer'>{subscription.singer}</p>
+        <p className='user'>User ID : {subscription.user}</p>
+        <p className='singer'>Artist ID :{subscription.singer}</p>
         <button onClick={handleAccept} className='btn accept'>Accept</button>
         <button onClick={handleReject} className='btn decline'>Decline</button>
       </form>
