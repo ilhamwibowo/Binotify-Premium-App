@@ -30,7 +30,7 @@ const Login = () => {
       if (data) {
         setCookie('user_id', data.user_id);
         setCookie("jwt", data.accessToken);
-        if (data.isAdmin === 1) {
+        if (data.isAdmin) {
           navigate("/subscription");
         }
         else {
