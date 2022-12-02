@@ -17,7 +17,7 @@ const Subscription = () => {
   useEffect(() => {
     const getsubs = async () => {
         try {
-          const { data } = await axios.post("http://localhost:8000/subscribe/request", {});
+          const { data } = await axios.post("http://localhost:8000/subscribe", {});
           // alert(data.return[0].status);
           if (data) {
             setSubs(data.return);
