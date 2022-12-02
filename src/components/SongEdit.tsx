@@ -19,9 +19,9 @@ const SongEdit: React.FC<Props> = ({song, songList, setSongList }) => {
         <div className='song-edit'>
             <form className='grid'>
                 <p className='song-id'>{song.song_id}</p>
-                <input type="text" className='input-lagu' id="judul" value={song.judul} />
-                <input type="text" className='input-lagu' id="penyanyi" value={song.penyanyi} />
-                <input type="text" className='input-lagu' id="audio-path" value={song.audio_path} />
+                <input type="text" className='input-lagu' id="judul" defaultValue={song.judul}/>
+                <input type="text" className='input-lagu' id="penyanyi" defaultValue={song.penyanyi} />
+                <input type="text" className='input-lagu' id="audio-path" defaultValue={song.audio_path} />
                 <button className='btn-edit'>Edit</button>
                 <button className='btn-delete'>Delete</button>
             </form>
