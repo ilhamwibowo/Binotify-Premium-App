@@ -5,8 +5,11 @@
     grid-template-rows: 60px 100%;
     grid-template-areas:
         "sidebar navbar"
-        "add-song"
-        "sidebar main";
+        "sidebar main-manage-music"
+        "new-lagu"
+        "new-lagu"
+        "new-lagu"
+        ;
 }
 
 Sidebar {
@@ -19,8 +22,51 @@ Navbar {
 
 .main-manage-music {
     grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "a"
+        "add-song-subpage"
+        /* "btn-add-song" */
+        ;
+
 }
 
-.btn-add-song{
-    grid-area: add-song;
+.add-song-subpage{
+    display :grid;
+}
+
+.btn-add-song {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #1ED760 ;
+    justify-self: center;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 100%;
+    margin-bottom: 2px;
+    transition-duration: 0.4s;
+}
+
+.btn-add-song:hover {
+    border: none;
+    padding:15px;
+    width: 100px;
+    height: 50px;
+    border-radius:35px;
+    background-color: #93fcb8; ;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    opacity: 100%;
+
+}
+
+
+
+.new-lagu {
+    width: 20%;
+    justify-self: center;
+    margin: 5px;
 }

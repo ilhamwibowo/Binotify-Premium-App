@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import SongEdit from '../components/SongEdit';
 import SongList from '../components/SongList';
+import { send } from 'process';
 
 interface ManageMusic{
   song_id : number,
@@ -20,8 +21,13 @@ const ManageMusic = () => {
       <Sidebar />
      
       <div className='main-manage-music'>
-          <SongList songList={songList} setSongList={setSongList}/>
-          <button className='btn-add-song'>Add Song</button>     
+        <SongList songList={songList} setSongList={setSongList}/>
+        <form className='add-song-subpage'>
+          <button className='btn-add-song' >Add Song</button> 
+          <input type="text" className='new-lagu' id="new-judul" placeholder='Input Title'/>
+          <input type="text" className='new-lagu' id="new-penyanyi" placeholder='Input Artist' />
+          <input type="text" className='new-lagu' id="new-audio-path" placeholder='Input Audio Path' />
+        </form>
       </div>
       
     </div>
