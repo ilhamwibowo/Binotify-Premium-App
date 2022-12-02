@@ -9,27 +9,55 @@
 }
 
 .song-edit > .grid {
-    margin: 10px 15px;
+    margin: 15px 15px;
+    padding : 15px 10px;
     height: 85%;
     display: grid;
-    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.5fr 0.5fr;
-    justify-items: left;
+    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    justify-items: center center center center center center;
     grid-template-areas: 
-    "song-id judul penyanyi audio-path btn-edit btn-delete";
+    "song-id judul judul judul btn-edit btn-delete";
 }
 
-.song-edit > .song-id {
-    grid-area: "song-id";
+
+.song-edit > .grid > .song-id {
+    grid-area: song-id;
+    font-size: 1em;
+    font-weight: 200;
+    color: white;
+    margin: 29px;
 }
-.song-edit > .judul {
+
+
+
+
+.song-edit > .grid > .input-lagu {
     grid-area: "judul";
+    width: auto;
+    height: 50px;
+    margin: 13px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    font: 1em 'Montserrat', Verdana;
+    color: white;
 }
-.song-edit > .penyanyi {
-    grid-area: "penyanyi";
+
+.song-edit > .grid > .input-lagu:hover {
+    grid-area: "judul";
+    width: fit-content;
+    height: 50px;
+    margin: 13px;
+    border: none;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 10px;
+    background-color: transparent;
+    font: 1em 'Montserrat', Verdana;
+    color: black;
+    background-color: white;
 }
-.song-edit > .audio-path {
-    grid-area: "audio-path";
-}
+
 
 .song-edit > .grid > .btn-edit {
     border: none;
@@ -39,9 +67,10 @@
     border-radius:35px;
     background-color: #1ED760 ;
     margin: 13px;
+    margin-left: auto;
     font-weight: 800;
     transition-duration: 0.4s;
-    opacity: 50%;
+    opacity: 100%;
 }
 
 .song-edit > .grid > .btn-delete {
@@ -52,9 +81,10 @@
     border-radius:35px;
     background-color: #1ED760 ;
     margin: 13px;
+    margin-left: 50px;
     font-weight: 800;
     transition-duration: 0.4s;
-    opacity: 50%;
+    opacity: 100%;
 }
 
 .song-edit > .grid > .btn-edit:hover {
