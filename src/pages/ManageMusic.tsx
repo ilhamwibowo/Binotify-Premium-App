@@ -20,6 +20,7 @@ const ManageMusic = () => {
   // const [songList, setSongList] = useState<ManageMusic[]>([{song_id: 1, judul: "Dynamite", penyanyi: "Blackpink", audio_path: "https://www.youtube.com/watch?v=gdZLi9oWNZg"}, {song_id: 2, judul: "Ice Cream", penyanyi: "Blackpink", audio_path: "https://www.youtube.com/watch?v=gdZLi9oWNZg"}])
   
   const [songList, setSongList] = useState<ManageMusic[]>([])
+  const [addSong, setAddSong] = useState({ judul: "", penyanyi_id: "", audio_path: ""})
   const [cookies, setCookie, removeCookie] = useCookies(['jwt', 'user_id']);
 
   useEffect(() => {
@@ -38,7 +39,24 @@ const ManageMusic = () => {
     getSongs();
   }, [cookies]);
 
-  
+  const handleAdd = async (event: React.FormEvent<HTMLFormElement>) => {
+
+    event.preventDefault();
+
+    const songData = {
+      judul: addSong.judul,
+      penyanyi_id: addSong.penyanyi_id,
+      audio_path: addSong.audio_path,
+    };
+
+    try {
+      const { data } = await axios.post("http://localhost:8000/song", songData);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+
   return (
     <div className="container">
       <Navbar />
@@ -46,11 +64,39 @@ const ManageMusic = () => {
      
       <div className='main-manage-music'>
         <SongList songList={songList} setSongList={setSongList}/>
-        <form className='add-song-subpage'>
-          <button className='btn-add-song' >Add Song</button> 
-          <input type="text" className='new-lagu' id="new-judul" placeholder='Input Title'/>
-          <input type="text" className='new-lagu' id="new-penyanyi" placeholder='Input Artist' />
-          <input type="text" className='new-lagu' id="new-audio-path" placeholder='Input Audio Path' />
+        <form className='add-song-subpage' onSubmit={(e) => handleAdd(e)} >
+          <button className='btn-add-song' type='submit'>Add Song</button> 
+          <input 
+            type="text" 
+            name="judul" 
+            className='new-lagu' 
+            id="new-judul" 
+            placeholder='Input Title'
+            onChange={(e) =>
+              setAddSong({ ...addSong, [e.target.name]: e.target.value })
+            }
+            
+          />
+          <input 
+            type="text" 
+            name="penyanyi_id" 
+            className='new-lagu' 
+            id="new-penyanyi" 
+            placeholder='Input Artist' 
+            onChange={(e) =>
+              setAddSong({ ...addSong, [e.target.name]: e.target.value })
+            }
+          />
+          <input 
+            type="text" 
+            name="audio_path" 
+            className='new-lagu' 
+            id="new-audio-path" 
+            placeholder='Input Audio Path' 
+            onChange={(e) =>
+              setAddSong({ ...addSong, [e.target.name]: e.target.value })
+            }
+          />
         </form>
       </div>
       
