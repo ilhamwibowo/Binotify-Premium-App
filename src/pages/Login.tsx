@@ -27,7 +27,6 @@ const Login = () => {
     try {
 
       const { data } = await axios.post("http://localhost:8000/login", userData);
-      navigate("/")
       if (data) {
         setCookie("jwt", data.accessToken);
         navigate("/");

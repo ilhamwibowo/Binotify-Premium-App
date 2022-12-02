@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Sidebar.css"
+import Logout from '../pages/Logout';
 
 const sidebar = () => {
   return (
@@ -7,6 +8,7 @@ const sidebar = () => {
         <a href='/' className='header'>Binotify</a>
         <a href='/subscription'>Subscription</a>
         <a href='/manage-music'>Manage Music</a>
+        <a href='/logout'>Log Out</a>
     </div>
   )
 }

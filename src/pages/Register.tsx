@@ -35,10 +35,8 @@ const Register = () => {
     };
     try {
       const { data } = await axios.post("http://localhost:8000/register", userData);
-      navigate("/")
       if (data) {
-        setCookie("jwt", data.accessToken);
-        navigate("/");
+        navigate("/login");
       }
     } catch (ex) {
       alert(ex);
@@ -64,7 +62,7 @@ const Register = () => {
             <p className="input-name">Username</p>
             <input 
               type="text" 
-              name="user" 
+              name="username" 
               id="username" 
               className="input-field" 
               placeholder="Username" 

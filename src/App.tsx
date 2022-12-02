@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Subscription from './pages/Subscription';
 import ManageMusic from './pages/ManageMusic';
+import Logout from './pages/Logout';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="Register/*" element={<Register />} />
         <Route path="subscription/*" element={<Subscription />} />
         <Route path="manage-music/*" element={<ManageMusic />} />
+        <Route path="logout/*" element={<Logout />} />
       </Routes>
     </Router>
   );
