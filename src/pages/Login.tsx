@@ -6,7 +6,7 @@ import './Login.css';
 
 const Login = () => {
   document.body.style.backgroundColor = "white";
-  const [cookies, setCookie, removeCookie] = useCookies(['jwt']);
+  const [cookies, setCookie, removeCookie] = useCookies(['jwt', 'user_id']);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -28,6 +28,7 @@ const Login = () => {
 
       const { data } = await axios.post("http://localhost:8000/login", userData);
       if (data) {
+        setCookie('user_id', data.user_id);
         setCookie("jwt", data.accessToken);
         if (data.isAdmin === 1) {
           navigate("/subscription");
